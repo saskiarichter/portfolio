@@ -1,1 +1,53 @@
-/* You can add global styles to this file, and also import other style files */
+@import './assets/fonts/syne.font.scss';
+@import './assets/fonts/overpass.font.scss';
+
+$backgroundClr: #FFFCF3;
+$primaryClr: #000000;
+$highlightClr: #FF9900;
+
+@mixin dFlex($jc: center, $ai: center, $g: 0px) {
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+    gap: $g;
+}
+
+@mixin fontSyne($fs: 32px, $fw: 700, $fc: $primaryClr) {
+    font-family: 'Syne';
+    font-size: $fs;
+    font-weight: $fw;
+    color: $fc;
+}
+
+@mixin fontOverpass($fs: 12px, $fw: 400, $fc: $primaryClr) {
+    font-family: 'Overpass';
+    font-size: $fs;
+    font-weight: $fw;
+    color: $fc;
+}
+
+@mixin generalButton() {
+    padding: 20px 60px 20px 60px;
+    border: solid 4px $primaryClr;
+    @include fontOverpass($fs: 23px);
+    background-color: $backgroundClr;
+    transition: padding 125ms ease-out, box-shadow 125s ease-out, background-color 100ms ease-in-out;
+
+    &:hover {
+        font-weight: 700;
+        padding: 20px 80px 20px 80px;
+        box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.15);
+        cursor: pointer;
+    }
+
+    &:active {
+        background-color: $primaryClr;
+        @include fontOverpass($fs: 23px, $fc: $backgroundClr);
+    }
+}
+
+body {
+    background-color: $backgroundClr;
+    margin: 0;
+    @include dFlex();
+}

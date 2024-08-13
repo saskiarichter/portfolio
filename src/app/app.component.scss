@@ -1,0 +1,20 @@
+@import './../styles.scss';
+
+div{
+    @include dFlex();
+    flex-direction: column
+}
+
+h1{
+    @include fontSyne();
+}
+
+h2{
+    @include fontOverpass();
+}
+
+button{
+    @include generalButton();
+}
+
+
