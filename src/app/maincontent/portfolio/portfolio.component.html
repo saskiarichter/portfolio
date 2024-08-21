@@ -1,0 +1,27 @@
+<section>
+    <h2>Portfolio</h2>
+
+    <span>
+        {{'PORTFOLIO.text' | translate}}
+    </span>
+
+    <div>
+        <app-project-left [projectTitle]="'Join'" [projectSkills]="'Angular | TypeScript | HTML | CSS | Firebase'"
+            [projectDescription]="join"
+            [projectImage]="'./assets/img/join.png'" [projectGithub]="'https://github.com/saskiarichter/Join'"
+            [projectLink]="'https://join.saskiarichter.com'"></app-project-left>
+
+        <app-project-right [projectTitle]="'El Pollo Loco'" [projectSkills]="'JavaScript | HTML | CSS'"
+            [projectDescription]="polloloco"
+            [projectImage]="'./assets/img/polloloco1.png'"
+            [projectGithub]="'https://github.com/saskiarichter/El-Pollo-Loco'"
+            [projectLink]="'https://elpolloloco.saskiarichter.com'"></app-project-right>
+
+        <app-project-left [projectTitle]="'Pokédex'" [projectSkills]="'JavaScript | HTML | CSS | Api'"
+            [projectDescription]="pokedex"
+            [projectImage]="'./assets/img/pokedex.png'" [projectGithub]="'https://github.com/saskiarichter/Pokedex'"
+            [projectLink]="'https://pokedex.saskiarichter.com'"></app-project-left>
+
+    </div>
+
+</section>

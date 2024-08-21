@@ -1,0 +1,58 @@
+<section>
+    <div class="footer-layout">
+        <h2>{{"CONTACT.headline" | translate}}</h2>
+
+        <div>
+            <span class="contact-subtitle">{{"CONTACT.subtitle" | translate}}</span>
+            <span class="contact-text">{{"CONTACT.text" | translate}}</span>
+
+            <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+
+                <input #name="ngModel" [(ngModel)]="contactData.name" minlength="3" type="text" id="name" name="name"
+                    placeholder="{{namePH}}" required autocomplete="off">
+                @if (name.invalid && (name.touched || contactForm.submitted)) {
+                <span class="required">{{"CONTACT.requiredName" | translate}}</span>
+                }
+
+                <input #email="ngModel" [(ngModel)]="contactData.email" type="email" id="email" name="email"
+                    placeholder="{{mailPH}}" required autocomplete="off"
+                    pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+                @if (email.invalid && (email.touched || contactForm.submitted)) {
+                <span class="required">{{"CONTACT.requiredMail" | translate}}</span>
+                }
+
+                <textarea #message="ngModel" [(ngModel)]="contactData.message" minlength="10" type="text" id="message"
+                    name="message" placeholder="{{messagePH}}" required></textarea>
+                @if (message.invalid && (message.touched || contactForm.submitted)) {
+                <span class="required">{{"CONTACT.requiredMessage" | translate}}</span>
+                }
+
+                <div class="checkbox">
+                    <input (click)="checkPrivacy()" #checkbox="ngModel" [(ngModel)]="checkedPrivacy" type="checkbox"
+                        id="check" name="check" required>
+                    <span>
+                        {{"CONTACT.text1" | translate}}
+                        <button>
+                        <a href="legalnotice">
+                            {{"CONTACT.privacy" | translate}}
+                            <div></div>
+                        </a>
+                    </button>
+                    {{"CONTACT.text2" | translate}}
+                    </span>
+                </div>
+                @if (privacyisNotValid == true) {
+                <span class="required">{{"CONTACT.requiredPrivacy" | translate}}</span>
+                }
+
+                @if (isSubmitted) {
+                    <div class="thanks">
+                        {{"CONTACT.thanks" | translate}}
+                    </div>
+                    }
+
+                <input type="submit" value="{{send}}" [disabled]="!checkedPrivacy">
+            </form>
+        </div>
+    </div>
+</section>

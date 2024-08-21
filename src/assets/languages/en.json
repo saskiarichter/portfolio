@@ -1,0 +1,70 @@
+{
+    "HEADER": {
+        "about": "About",
+        "skills": "Skills",
+        "portfolio": "Portfolio",
+        "contact": "Contact"
+    },
+    "HOME": {
+        "scroll": "down"
+    },
+    "ABOUT":{
+        "headline": "About me",
+        "text1": "I am a Front-end deverloper from Berlin, Germany. I help designers and companies to bring their ideas to real life. Creativity and logical thinking are skills that I have developed to connect ideas into quality products.",
+        "text2": "If you think I'd be a good match for your projects, contact me!",
+        "based": "Based in Berlin",
+        "remote": "Open to work Remote",
+        "contact": "Let's talk"
+    },
+    "SKILLS":{
+        "headline": "My skills",
+        "text1": "Don't see the skill you need?",
+        "text2": "I'm always ready to learn!",
+        "contact": "Contact me"
+    },
+    "PORTFOLIO":{
+        "text": "Explore a selection of my work here - Interact with projects to see my skills in action.",
+        "join": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
+        "polloloco": "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.",
+        "pokedex": "Based on the PokéAPI a simple library that provides and catalogues pokemon information.",
+        "dabubble": ""
+    },
+    "CONTACT":{
+        "headline": "Say Hi!",
+        "subtitle": "Want to discuss a new project?",
+        "text": "Say hello! Let's discuss your ideas and make it happen",
+        "name": "Youre name",
+        "email": "Youre email",
+        "message": "Youre message",
+        "text1": "I've read the",
+        "text2": "and agree to the processing of my data as outlined.",
+        "privacy": "privacy policy",
+        "thanks": "Thank you for your message.",
+        "requiredName": "Your name is required.",
+        "requiredMail": "Your email is required.",
+        "requiredMessage": "Please write a message.",
+        "requiredPrivacy": "Please accept the privacy policy.",
+        "send": "Send message"
+    },
+    "FOOTER": {
+        "notice": "Legal notice"
+    },
+    "IMPRINT":{
+        "headline": "Legal notice",
+        "subtitle": "Information according to § 5 DDG",
+        "subtitle2": "Disclaimer - legal information",
+        "subtitle3": "Right to information and cancellation",
+        "subtitle4": "Data protection (general)",
+        "text1": "You have the right to enquire about the personal data collected about you at any time, free of charge and without delay. You can also revoke your consent to the use of your personal data with effect for the future. To do so, please contact the person specified in the legal notice.",
+        "text2": "When you access our website, general information (so-called server log files) is automatically recorded. These include the web browser you are using, your operating system and your internet service provider. This data does not allow any conclusions to be drawn about your person and is statistically analysed by us in order to improve our website technically and in terms of content. The collection of this information is necessary in order to be able to deliver the content of the website correctly.",
+        "text3": "The use of the website is generally possible without providing personal data. Insofar as personal data (e.g. name, address or e-mail addresses) is collected, this is always done on a voluntary basis as far as possible. This data will not be passed on to third parties without your express consent.",
+        "text4": "If a contractual relationship is to be established, developed or amended, or if you submit an enquiry to us, we collect and use your personal data insofar as this is necessary for this purpose (inventory data). We collect, process and use personal data insofar as this is necessary to enable you to use the website (usage data). All personal data is only stored for as long as is necessary for the stated purpose (processing your enquiry or processing a contract). In doing so, we take into account retention periods under tax and commercial law. By order of the competent authorities, we must provide information about this data (inventory data) in individual cases, insofar as this is necessary for the purposes of criminal prosecution, to avert danger, to fulfil the statutory duties of the constitutional protection authorities or the Military Counter-Intelligence Service or to enforce intellectual property rights.",
+        "text5": "We expressly point out that data transmission on the Internet (e.g. when communicating by e-mail) can have security gaps. Access to data cannot be completely protected.",
+        "text6": "The use of contact data published within the scope of the imprint obligation by third parties for sending unsolicited advertising and information material is hereby expressly prohibited. This does not apply to existing business relationships or if you have received our consent to do so.",
+        "text7": "The providers and all third parties named on this website expressly reserve the right to take legal action in the event of the unsolicited sending of advertising information. The same applies to the commercial use and forwarding of data.",
+        "text8": "This legal notice was created with the help of the ",
+        "text9": "generator ",
+        "text10": "from ",
+        "text11": "and was translated by the person specified in the legal notice."
+    }
+}

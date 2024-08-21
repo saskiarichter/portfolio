@@ -1,0 +1,26 @@
+<fieldset>
+    <legend>{{'SKILLS.headline' | translate}}</legend>
+
+    <div class="skills-container">
+        @for (skill of skills; track $index) {
+        <div>
+            <img src="{{skill.icon}}" alt="icon">
+            <span>{{skill.skillname}}</span>
+        </div>
+        }
+    </div>
+
+    <div class="skill-contact">
+        <img src="./assets/img/skill.svg" alt="">
+        <span>
+            {{'SKILLS.text1' | translate}}
+            <a href="#contact">
+                <button class="contact-me">
+                    {{'SKILLS.contact' | translate}}
+                    <div></div>
+                </button>
+            </a>
+            {{'SKILLS.text2' | translate}}
+        </span>
+    </div>
+</fieldset>  

@@ -1,0 +1,47 @@
+@import './../../styles.scss';
+
+.startpage{
+    width: 100vw;
+    height: 100vh;
+    @include dFlex();
+    padding-inline: 100px;
+    box-sizing: border-box;
+}
+
+.layout{
+    width: 100vw;
+    @include dFlex();
+    padding-top: 120px;
+    padding-inline: 100px;
+    box-sizing: border-box;
+}
+
+@media(max-width:1007px){
+    .startpage{
+        padding-inline: 50px;
+    }
+    
+    .layout{
+        padding-inline: 50px;
+    }
+}
+
+@media(max-width: 650px){
+    .startpage{
+        padding-inline: 30px;
+    }
+    
+    .layout{
+        padding-inline: 30px;
+    }
+}
+
+@media(max-width: 465px){
+    .startpage{
+        padding-inline: 10px;
+    }
+    
+    .layout{
+        padding-inline: 10px;
+    }
+}

@@ -1,0 +1,107 @@
+@import './../../styles.scss';
+
+section{
+    width: 100vw;
+    @include dFlex();
+ 
+    >div{
+        width: 100%;
+        max-width: 1240px;
+        margin-top: 200px;
+        margin-bottom: 100px;
+        @include dFlex($g: 48px);
+        flex-direction: column;
+        margin-inline: 100px;
+    }
+}
+
+h2{
+    @include subtitle();
+    margin-bottom: 48px;
+}
+
+h3{
+    @include fontSyne($fw: 600);
+}
+
+h4{
+    @include fontSyne($fw: 600, $fs: 24px);
+    padding-bottom: 12px;
+}
+
+a{
+    text-decoration: none;
+    color: $primaryClr;
+    font-weight: 400;
+}
+
+.legalnotice{
+    width: 100%;
+    @include dFlex($ai: start, $g: 24px);
+    flex-direction: column;
+
+    >span{
+        @include fontOverpass($fw: 500);
+    }
+}
+
+.privacy{
+    @include dFlex($ai: start, $g: 24px);
+    flex-direction: column;
+}
+
+@media(max-width: 1007px){
+    section{
+        >div{
+            @include dFlex($g: 48px);
+            margin-inline: 50px;
+        }
+    }
+
+    h2{
+        font-size: 56px;
+        line-height: 56px;
+    }
+}
+
+@media(max-width: 650px){
+    section{
+
+        >div{
+            @include dFlex($g: 48px);
+            margin-inline: 30px;
+        }
+    }
+}
+
+@media(max-width: 570px){
+    section{
+        @include fontOverpass($fs: 18px);
+
+        >div{
+            margin-top: 140px;
+            margin-bottom: 180px;
+            @include dFlex($g: 32px);
+        }
+    }
+
+    h2{
+        font-size: 32px;
+        line-height: 32px;
+    }
+
+    h3{
+        font-size: 24px;
+        line-height: 24px;
+    }
+
+    h4{
+        font-size: 20px;
+        line-height: 20px;
+    }
+}
+
+@media(max-width: 465px){
+
+
+}

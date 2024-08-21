@@ -1,0 +1,32 @@
+@import './../../../styles.scss';
+
+section {
+    width: 100%;
+    max-width: 1240px;
+    @include dFlex();
+    flex-direction: column;
+
+    h2 {
+        @include subtitle();
+    }
+
+    span{
+        width: 100%;
+        text-align: center;
+    }
+
+    div{
+        width: 100%;
+        @include dFlex($g: 24px);
+        flex-direction: column;
+        margin-bottom: 80px;
+    }
+} 
+
+@media(max-width: 650px){
+    section{
+        span{
+            font-size: 18px;
+        }
+    }
+}

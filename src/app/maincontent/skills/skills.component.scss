@@ -1,0 +1,177 @@
+@import './../../../styles.scss';
+
+fieldset {
+    width: 100%;
+    max-width: 1240px;
+    border: 4px solid $primaryClr;
+    @include dFlex($g: 64px);
+    flex-direction: column;
+    padding: 64px;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+
+    legend {
+        @include subtitle();
+        margin: 0;
+        text-align: center;
+    }
+}
+
+.skills-container{
+    @include dFlex();
+    flex-wrap: wrap;
+    column-gap: 128px;
+    row-gap: 64px;
+     
+    >div{
+        width: 100px;
+        @include dFlex($g: 10px);
+        flex-direction: column;
+        text-align: center;
+        @include fontOverpass($fw: 700, $fs: 16px);
+
+        img{
+            transform: translateY(0);
+            transition: transform 75ms ease-in;
+        }
+
+        &:hover{
+            img{
+                transform: translateY(-10px);
+                transition: transform 75ms ease-in;
+            }
+
+            span{
+                color: $highlightClr;
+            }
+        }
+    }
+}
+
+.skill-contact {
+    @include dFlex($g: 12px);
+
+    button {
+        text-align: start;
+        border: none;
+        background-color: transparent;
+        @include fontOverpass($fc: $highlightClr);
+        transition: font-weight 75ms ease-in;
+        padding: 0;
+
+        >div{
+            @include underlineButton($clr: $highlightClr);
+        }
+
+        &:hover {
+            cursor: pointer !important;
+            transition: font-weight 75ms ease-in;
+
+            >div{
+                @include underlineButtonHover();
+            }
+
+        }
+    }
+} 
+
+@media(max-width: 1007px){
+    fieldset {
+        padding: 48px;
+    }
+
+    .skills-container{
+        column-gap: 112px;
+        row-gap: 48px;
+    }    
+}
+
+@media(max-width: 945px){
+    
+}
+
+
+@media(max-width: 650px){
+    fieldset {
+        padding: 24px;
+        @include dFlex($g: 48px);
+    }
+
+    .skills-container{
+        column-gap: 60px;
+        row-gap: 24px;
+
+        >div{
+            img{
+                transform: translateY(0) scale(0.8);
+            }
+
+            &:hover{
+                img{
+                    transform: translateY(-10px) scale(0.8);
+                }
+            }
+        }
+    }    
+
+    .skill-contact{
+        font-size: 18px;
+        padding: 0;
+
+        img{
+            transform: scale(0.8);
+        }
+
+        button {
+            font-size: 18px;
+            width: 100px;
+    
+            &:hover {
+                @include fontOverpass($fw: 700, $fc: $highlightClr);
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+@media(max-width: 465px){
+    fieldset {
+        padding: 18px;
+    }
+
+    .skills-container{
+        column-gap: 24px;
+        row-gap: 24px;
+
+        >div{
+            img{
+                transform: translateY(0) scale(0.7);
+            }
+    
+            &:hover{
+                img{
+                    transform: translateY(-10px) scale(0.7);
+                }
+            }
+        }
+    }    
+
+    .skill-contact{
+        font-size: 16px;
+
+        img{
+            transform: scale(0.7);
+        }
+
+        button {
+            font-size: 16px;
+            width: 90px;
+    
+            &:hover {
+                @include fontOverpass($fw: 700, $fc: $highlightClr);
+                font-size: 16px;
+            }
+        }
+    }
+}
+

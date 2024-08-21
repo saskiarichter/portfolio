@@ -1,0 +1,74 @@
+{
+    "HEADER": {
+        "about": "Über",
+        "skills": "Fähigkeiten",
+        "portfolio": "Portfolio",
+        "contact": "Kontakt"
+    },
+
+    "HOME": {
+        "scroll": "runter"
+    },
+
+    "ABOUT":{
+        "headline": "Über mich",
+        "text1": "Ich bin eine Front-End-Entwicklerin aus Berlin. Ich helfe Designern und Unternehmen dabei, ihre Ideen in die Realität umzusetzen. Kreativität und logisches Denken sind Fähigkeiten, die ich entwickelt habe, um Ideen in Qualitätsprodukte zu verwandeln.",
+        "text2": "Wenn Sie glauben, dass ich gut zu Ihren Projekten passe, kontaktieren Sie mich!",
+        "based": "Berlin",
+        "remote": "Offen für Remote-Arbeit",
+        "contact": "Kontakt"
+    },
+
+    "SKILLS":{
+        "headline": "Fähigkeiten",
+        "text1": "Nicht die Fähigkeit dabei, die Sie suchen?",
+        "text2": "Ich bin bereit, etwas Neues zu lernen!",
+        "contact": "Schreiben Sie mir"
+    },
+    "PORTFOLIO":{
+        "text": "Entdecken Sie hier eine Auswahl meiner Arbeiten - Interagieren Sie mit Projekten, um meine Fähigkeiten in Aktion zu sehen oder schauen Sie sich den ausführlichen Code auf GitHub an.",
+        "join": "Ein Aufgabenmanager nach dem Vorbild des Kanban-Systems. Erstellen und organisieren Sie Aufgaben mit Hilfe von Drag-and-Drop-Funktionen und fügen Sie Benutzer und Kategorien hinzu.",
+        "polloloco": "Sprung-, Lauf- und Wurfspiel, das auf einem objektorientierten Ansatz basiert. Hilf Pepe, Münzen und Tabasco-Salsa zu finden, um gegen die verrückte Henne zu kämpfen.",
+        "pokedex": "Basierend auf der PokéAPI - eine einfache Bibliothek, die Pokemon-Informationen bereitstellt und katalogisiert.",
+        "dabubble": ""
+    },
+    "CONTACT":{
+        "headline": "Kontakt",
+        "subtitle": "Möchten Sie ein neues Projekt besprechen?",
+        "text": "Lassen Sie uns Ihre Ideen diskutieren und verwirklichen!",
+        "name": "Ihr Name",
+        "email": "Ihre Email",
+        "message": "Ihre Nachricht",
+        "text1": "Ich habe die",
+        "text2": "gelesen und erkläre mich mit der Verarbeitung meiner Daten wie beschrieben einverstanden.",
+        "privacy": "Datenschutzerklärung",
+        "thanks": "Danke für Ihre Nachricht.",
+        "requiredName": "Ihr Name ist erforderlich.",
+        "requiredMail": "Ihre Email ist erforderlich.",
+        "requiredMessage": "Bitte schreiben Sie eine Nachricht.",
+        "requiredPrivacy": "Bitte akzeptieren Sie die Datenschutzbestimmungen.",
+        "send": "Senden"
+    },
+    "FOOTER": {
+        "notice": "Impressum"
+    },
+    "IMPRINT":{
+        "headline": "Impressum",
+        "subtitle": "Angaben gemäß § 5 DDG",
+        "subtitle2": "Disclaimer - rechtliche Hinweise",
+        "subtitle3": "Auskunfts- und Widerrufsrecht",
+        "subtitle4": "Datenschutz (allgemein)",
+        "text1": "Sie haben jederzeit das Recht, sich unentgeltlich und unverzüglich über die zu Ihrer Person erhobenen Daten zu erkundigen. Ebenfalls können Sie Ihre Zustimmung zur Verwendung Ihrer angegebenen persönlichen Daten mit Wirkung für die Zukunft widerrufen. Hierfür wenden Sie sich bitte an die im Impressum genannte Person.",
+        "text2": "Beim Zugriff auf unsere Webseite werden automatisch allgemeine Informationen (sog. Server-Logfiles) erfasst. Diese beinhalten u.a. den von Ihnen verwendeten Webbrowser sowie Ihr Betriebssystem und Ihren Internet Service Provider. Diese Daten lassen keinerlei Rückschlüsse auf Ihre Person zu und werden von uns statistisch ausgewertet, um unseren Internetauftritt technisch und inhaltlich zu verbessern. Das Erfassen dieser Informationen ist notwendig, um den Inhalt der Webseite korrekt ausliefern zu können.",
+        "text3": "Die Nutzung der Webseite ist grundsätzlich ohne Angabe personenbezogener Daten möglich. Soweit personenbezogene Daten (beispielsweise Name, Anschrift oder E-Mail-Adressen) erhoben werden, erfolgt dies, soweit möglich, stets auf freiwilliger Basis. Diese Daten werden ohne Ihre ausdrückliche Zustimmung nicht an Dritte weitergegeben.",
+        "text4": "Sofern ein Vertragsverhältnis begründet, inhaltlich ausgestaltet oder geändert werden soll oder Sie an uns eine Anfrage stellen, erheben und verwenden wir personenbezogene Daten von Ihnen, soweit dies zu diesem Zwecke erforderlich ist (Bestandsdaten). Wir erheben, verarbeiten und nutzen personenbezogene Daten soweit dies erforderlich ist, um Ihnen die Inanspruchnahme des Webangebots zu ermöglichen (Nutzungsdaten). Sämtliche personenbezogenen Daten werden nur solange gespeichert wie dies für den genannten Zweck (Bearbeitung Ihrer Anfrage oder Abwicklung eines Vertrags) erforderlich ist. Hierbei werden steuer- und handelsrechtliche Aufbewahrungsfristen von uns berücksichtigt. Auf Anordnung der zuständigen Stellen müssen wir im Einzelfall Auskunft über diese Daten (Bestandsdaten) erteilen, soweit dies für Zwecke der Strafverfolgung, zur Gefahrenabwehr, zur Erfüllung der gesetzlichen Aufgaben der Verfassungsschutzbehörden oder des Militärischen Abschirmdienstes oder zur Durchsetzung der Rechte am geistigen Eigentum erforderlich ist.",
+        "text5": "Wir weisen ausdrücklich darauf hin, dass die Datenübertragung im Internet (z. B. bei der Kommunikation per E-Mail) Sicherheitslücken aufweisen kann. Vor dem Zugriff auf Daten kann nicht lückenlos geschützt werden.",
+        "text6": "Die Nutzung von im Rahmen der Impressumspflicht veröffentlichten Kontaktdaten durch Dritte zur Übersendung von nicht ausdrücklich angeforderter Werbung und Informationsmaterialien wird hiermit ausdrücklich untersagt. Ausgenommen hiervon sind bestehende Geschäftsbeziehungen bzw. es liegt Ihnen eine entsprechende Einwilligung von uns vor.",
+        "text7": "Die Anbieter und alle auf dieser Website genannten Dritten behalten sich ausdrücklich rechtliche Schritte im Falle der unverlangten Zusendung von Werbeinformationen vor. Gleiches gilt für die kommerzielle Verwendung und Weitergabe der Daten.",
+        "text8": "Dieses Impressum wurde mit Hilfe des ",
+        "text9": "Impressum-Generators ",
+        "text10": "von ",
+        "text11": "erstellt."
+    }
+
+}

@@ -1,0 +1,153 @@
+@import './../../styles.scss';
+
+header {
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: $backgroundClr;
+    padding-block: 30px;
+    @include dFlex($jc: space-between);
+}
+
+.menu {
+    @include dFlex($g: 40px);
+    flex-wrap: wrap;
+    padding-right: 100px;
+
+    a {
+        @include fontSyne($fw: 500, $fs: 18px);
+        text-decoration: none;
+
+        &:hover {
+            color: $highlightClr;
+            cursor: pointer;
+        }
+    }
+}
+
+.logo {
+    color: $primaryClr;
+    text-decoration: none;
+    @include fontSyne($fw: 800, $fc: $primaryClr);
+    box-sizing: border-box;
+    height: 50px;
+    @include dFlex();
+    padding-left: 100px;
+
+    .bracket{
+        font-size: x-large;
+    }
+
+    .bracket-left{
+        transform: translateX(0px);
+        transition: transform 75ms ease-in-out;
+    }
+
+    .bracket-right{
+        transform: translateX(0px);
+        transition: transform 75ms ease-in-out;
+    }
+
+    .initials{
+        font-style: italic;
+        margin-left: -4px;
+        margin-top: -5px;
+    }
+    
+    .r{
+        height: 100%;
+        padding-top: 12px;
+        padding-right: 4px;
+    }
+
+    .s{
+        padding-left: 4px;
+    }
+    
+    &:hover{
+        cursor: pointer;
+       
+        .bracket-left{
+            transform: translateX(-5px);
+            transition: transform 75ms ease-in-out;
+        }
+
+        .bracket-right{
+            transform: translateX(5px);
+            transition: transform 75ms ease-in-out;
+        }
+    }
+}
+
+.language{
+    @include dFlex($g: 2px);
+
+    >div{
+        border: 1px solid $primaryClr;
+        height: 16px;
+        @include dFlex();
+    }
+
+    >button {
+        @include fontSyne($fs: 16px, $fw: 500);
+        line-height: 16px;
+        border: none;
+        background-color: transparent;
+        padding: 0;
+
+        &:hover{
+            cursor: pointer;
+            color: $highlightClr;
+        }
+    }
+}
+
+@media(max-width: 1007px){
+    .menu {
+        padding-right: 50px;
+    }
+
+    .logo {
+        padding-left: 50px;
+    }
+}
+
+@media(max-width: 700px){
+    header {
+        padding-block: 10px;
+    }
+
+    .menu {
+        @include dFlex($g: 24px);
+        padding-right: 30px;
+
+        a {
+            @include fontSyne($fw: 500, $fs: 16px);
+        }
+    }
+
+    .logo {
+        padding-left: 30px;
+        transform: scale(0.9);
+    }
+}
+
+@media(max-width: 530px){
+    .menu {
+        width: 100%;
+        @include dFlex($g: 20px, $jc: flex-end);
+        row-gap: 8px;
+        padding-inline: 10px;
+
+        a {
+            @include fontSyne($fw: 500, $fs: 16px);
+        }
+    }
+
+    .logo {
+        transform: scale(0.8);
+        padding: 0;
+    }
+}

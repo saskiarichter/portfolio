@@ -1,0 +1,219 @@
+@import './../../../../styles.scss';
+
+section {
+    @include dFlex($g: 110px);
+    margin-top: 56px;
+    height: 100%;
+
+
+}
+
+.project-image {
+    position: relative;
+    z-index: 2;
+    mix-blend-mode: luminosity;
+    width: 60%;
+
+    >img {
+        width: 100%;
+    }
+}
+
+.overlay-border {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    border: 4px solid $primaryClr;
+    box-sizing: border-box;
+    @include dFlex($jc: end);
+    opacity: 0;
+
+    >img {
+        margin-right: -37px;
+    }
+}
+
+.project-info {
+    width: 40%;
+    @include dFlex($ai: start, $g: 12px);
+    flex-direction: column;
+    z-index: 1;
+    transform: translateX(-130%);
+    transition: transform 150ms ease-in;
+    visibility: hidden;
+    overflow: visible;
+
+    h3 {
+        @include fontSyne($fw: 800, $fs: 40px);
+        margin: 0;
+    }
+
+    .project-skills {
+        @include fontOverpass($fw: 400, $fs: 23px, $fc: $highlightClr);
+    }
+
+    .project-description {
+        @include fontOverpass($fw: 400, $fs: 16px);
+    }
+
+    a {
+        button {
+            @include generalButton();
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+@media(max-width:1007px) {
+    section {
+        flex-direction: column;
+        gap: 48px;
+    }
+
+    .project-image {
+        width: 100%;
+        margin-inline: 50px;
+        box-sizing: border-box;
+
+        >img {
+            padding-right: 57px;
+        }
+    }
+
+    .overlay-border {
+        width: auto;
+        right: 37px;
+    }
+
+    .project-info {
+        width: 100%;
+        margin-inline: 50px;
+    }
+}
+
+@media(max-width: 650px) {
+    .overlay-border {
+        >img {
+            transform: rotate(-130deg) scale(1.1);
+        }
+    }
+
+    .project-info {
+        h3 {
+            @include fontSyne($fw: 800, $fs: 32px);
+            line-height: 32px;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .project-skills {
+            @include fontOverpass($fw: 400, $fs: 18px, $fc: $highlightClr);
+        }
+    }
+}
+
+@media(max-width: 465px) {
+    .project-image {
+        margin: 0;
+    }
+
+    .overlay-border {
+        top: 10px;
+        left: 10px;
+
+        >img {
+            margin-right: -22px;
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    .project-info {
+        h3 {
+            @include fontSyne($fw: 800, $fs: 26px);
+            line-height: 26px;
+            width: 100%;
+        }
+    }
+}
+
+@media (hover: none) {
+    section {
+        &:hover {
+            .project-image {
+                mix-blend-mode: inherit;
+            }
+
+            .overlay-border {
+                opacity: inherit;
+
+                >img {
+                    transform: inherit;
+                }
+            }
+
+            .project-info {
+                visibility: visible;
+                transform: translateX(0) translateY(0);
+            }
+        }
+    }
+}
+
+
+@media (min-width: 1024px) {
+    section {
+        &:hover {
+            .project-image {
+                mix-blend-mode: normal;
+            }
+
+            .overlay-border {
+                opacity: 1;
+                transition: opacity 100ms ease-in;
+
+                >img {
+                    transform: rotate(-130deg) scale(1.5);
+                    transition: transform 150ms ease-in;
+                    transition-delay: 50ms;
+                }
+            }
+
+            .project-info {
+                visibility: visible;
+                transform: translateX(0);
+                transition: transform 150ms ease-in;
+                transition-delay: 100ms;
+
+                a {
+                    cursor: pointer !important;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .project-image {
+        mix-blend-mode: normal;
+    }
+
+    .project-info {
+        transform: translateY(0) translateX(0);
+        visibility: visible;
+    }
+
+    .overlay-border {
+        opacity: 1;
+
+        >img {
+            transform: rotate(-130deg) scale(1.3);
+        }
+    }
+}

@@ -1,0 +1,128 @@
+@import './../../../styles.scss';
+
+section {
+    width: 100%;
+    max-width: 1240px;
+    height: 100vh;
+    @include dFlex();
+    flex-direction: column;
+    position: relative;
+}
+
+.headline {
+    @include dFlex($g: 12px);
+    flex-direction: column;
+    margin-top: -50px;
+
+    h1 {
+        @include fontSyne($fw: 800, $fs: 128px);
+        text-align: center;
+        letter-spacing: -0.025em;
+        margin: 0;
+        line-height: 128px;
+
+        @media(max-width: 1200px){
+            @include fontSyne($fw: 800, $fs: 100px);
+            line-height: 100px;
+        }
+
+        @media(max-width: 890px){
+            @include fontSyne($fw: 800, $fs: 70px);
+            line-height: 70px;
+        }
+
+        @media(max-width: 650px){
+            @include fontSyne($fw: 800, $fs: 48px);
+            line-height: 48px;
+        }
+
+        @media(max-width: 465px){
+            @include fontSyne($fw: 800, $fs: 34px);
+            line-height: 34px;
+        }
+    }
+}
+
+.name-container {
+    width: 100%;
+    @include dFlex($g: 12px);
+
+    div {
+        border: solid 1.5px $primaryClr;
+        width: 100%;
+    }
+
+    span {
+        @include fontOverpass($fw: 700, $fs: 48px, $fc: $highlightClr);
+        letter-spacing: -0.025em;
+        white-space: nowrap;
+    }
+}
+
+.bottom-container {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    @include dFlex($jc: space-between);
+    padding-bottom: 30px;
+    @include fontOverpass($fw: 300, $fs: 22px);
+    letter-spacing: -0.025em;
+
+    >a {
+        writing-mode: vertical-lr;
+        transform: rotate(180deg);
+        text-decoration: none;
+        color: $primaryClr;
+    }
+
+    >div{
+        @include dFlex($jc: end);
+        flex-direction: column;
+        margin-right: -10px;
+    }
+} 
+
+@keyframes slideIn {
+    0% {
+      transform: translateY(-200px);
+    }
+    100% {
+      transform: translateY(200px);
+    }
+  }
+
+.scroll-down{
+    width: 100%;
+    overflow: hidden;
+    transform: translateY(0px);
+
+    img{
+        width: 100%;
+        animation: 1.5s ease-out slideIn;
+        animation-iteration-count: infinite;
+    }
+}
+
+@media(max-width: 650px){
+    .name-container {
+        span {
+            @include fontOverpass($fw: 700, $fs: 32px, $fc: $highlightClr);
+        }
+    }
+
+    .bottom-container {
+        @include fontOverpass($fw: 300, $fs: 18px);
+    } 
+
+    .scroll-down{
+        transform: scale(0.8);
+    }
+}
+
+@media(max-width: 465px){
+    .name-container {
+        span {
+            @include fontOverpass($fw: 700, $fs: 24px, $fc: $highlightClr);
+        }
+    }
+}

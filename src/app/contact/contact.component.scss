@@ -1,0 +1,219 @@
+@import './../../styles.scss';
+
+section {
+    width: 100vw;
+    @include dFlex();
+    padding-top: 100px;
+    padding-inline: 50px;
+    background-image: url('./../../assets/img/contact-background.svg');
+    margin-bottom: -1px;
+
+    @media(min-width: 1441px){
+        background-image: none;
+        background-color: $primaryClr;
+    }
+}
+
+.footer-layout {
+    width: 100%;
+    max-width: 1240px;
+
+    h2 {
+        @include subtitle();
+        color: $backgroundClr !important;
+        margin-block: 48px;
+    }
+
+    >div {
+        @include dFlex($g: 12px);
+        flex-direction: column;
+        margin-bottom: 24px;
+
+        .contact-subtitle {
+            @include fontOverpass($fw: 700, $fs: 32px, $fc: $highlightClr);
+        }
+
+        .contact-text {
+            @include fontOverpass($fw: 400, $fc: $backgroundClr);
+        }
+
+        >button {
+            @include generalButton();
+            background-color: $primaryClr;
+            color: $backgroundClr;
+            border-color: $backgroundClr;
+        }
+
+        >span{
+            text-align: center;
+        }
+    }
+}
+
+form {
+    width: 70vw;
+    max-width: 580px;
+    @include dFlex($g: 24px);
+    flex-direction: column;
+    box-sizing: border-box;
+
+    input[type=text],
+    [type=email],
+    textarea {
+        width: 100%;
+        background-color: $primaryClr;
+        border: 2px solid $backgroundClr;
+        border-top: transparent;
+        border-left: transparent;
+        border-right: transparent;
+        padding: 15px 25px 15px 25px;
+        @include fontOverpass($fc: $backgroundClr);
+        outline: none;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &:focus {
+            border: 2px solid $backgroundClr;
+            outline: none
+        }
+    }
+
+    textarea {
+        resize: vertical;
+        min-height: 60px;
+        max-height: 240px;
+    }
+
+    input[type=submit]:disabled {
+        padding: 20px 60px 20px 60px;
+        border: solid 4px $backgroundClr;
+        @include fontOverpass($fs: 23px, $fc: $backgroundClr);
+        background-color: $primaryClr;
+        opacity: 50%;
+        box-shadow: 5px 5px 15px 0 rgba(0, 0, 0, 0.15);
+
+        @media(max-width: 1200px){
+            padding: 10px 50px 10px 50px;
+        }
+    }
+
+    input[type=submit]:enabled {
+        @include generalButton();
+        background-color: $primaryClr;
+        color: $backgroundClr;
+        border-color: $backgroundClr;
+        margin-top: 24px;
+
+    }
+}
+
+.checkbox {
+    @include fontOverpass($fw: 400, $fs: 14px, $fc: $backgroundClr);
+    width: 100%;
+    @include dFlex($jc: start, $g: 8px);
+
+    input {
+        accent-color: $highlightClr;
+        margin-top: -5px;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    button {
+        text-align: start;
+        border: none;
+        background-color: transparent;
+        @include fontOverpass($fc: $highlightClr, $fs: 14px);
+        transition: font-weight 75ms ease-in;
+        padding: 0;
+
+        >a{
+            text-decoration: none;
+            color: $highlightClr;
+
+            >div {
+                @include underlineButton($clr: $highlightClr);
+            }
+
+            &:hover {
+                cursor: pointer !important;
+                transition: font-weight 75ms ease-in;
+    
+                >div {
+                    @include underlineButtonHover();
+                }
+            }
+        }
+    }
+}
+
+.required {
+    width: 100%;
+    text-align: start;
+    @include fontOverpass($fw: 400, $fs: 12px, $fc: rgba(230, 28, 64, 1));
+}
+
+.thanks {
+    width: 100%;
+    @include dFlex();
+    @include fontOverpass($fc: $backgroundClr, $fs: 24px);
+    background-color: $primaryClr;
+    text-align: center;
+    animation: 0.5s ease-in-out 0s slideIn;
+    margin-top: 30px;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@media(max-width: 650px){
+    section{
+        padding-top: 50px;
+    }
+    
+    .footer-layout {
+        h2{
+            color: $backgroundClr !important; 
+            margin-block: 32px !important;
+            @include dFlex();
+        }
+    
+        >div {
+            margin-bottom: 24px;
+
+            .contact-subtitle {
+                @include fontOverpass($fw: 700, $fs: 20px, $fc: $highlightClr);
+            }
+    
+            .contact-text {
+                @include fontOverpass($fw: 400, $fc: $backgroundClr);
+                font-size: 16px;
+            }
+        }
+    }
+
+    form {
+        @include dFlex($g: 12px);
+    
+        input[type=text],
+        [type=email],
+        textarea {
+            padding: 10px 20px 10px 20px;
+            @include fontOverpass($fc: $backgroundClr);
+            font-size: 14px;
+        }
+    }
+}

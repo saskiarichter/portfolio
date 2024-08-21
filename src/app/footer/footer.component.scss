@@ -1,0 +1,145 @@
+@import './../../styles.scss';
+
+footer {
+    width: 100vw;
+    background-color: $primaryClr;
+    color: $backgroundClr;
+    @include dFlex();
+
+    .footer-content {
+        width: 100%;
+        @include dFlex($jc: space-between);
+        padding: 30px 100px 30px 100px;
+    }
+}
+
+.footer-left {
+    @include dFlex($ai: start, $g: 0px);
+    flex-direction: column;
+}
+
+.footer-right {
+    @include dFlex($ai: end, $g: 12px);
+    flex-direction: column;
+
+    div { 
+        @include dFlex($g: 40px);
+
+        a{
+            transform: translateY(0);
+            transition: transform 75ms ease-in;
+
+            &:hover{
+                transform: translateY(-10px);
+                transition: transform 75ms ease-in;
+                cursor: pointer;
+            }
+        }
+    }
+
+    a {
+        @include fontOverpass($fs: 16px, $fw: 400, $fc: $backgroundClr);
+        text-decoration: none;
+
+        >div{
+            @include underlineButton($clr: $highlightClr);
+        }
+
+        &:hover {
+            cursor: pointer;
+
+            >div{
+                @include underlineButtonHover();
+            }
+        }
+    }
+}
+
+.logo {
+    color: white;
+    text-decoration: none;
+    @include fontSyne($fw: 800, $fc: $backgroundClr);
+    box-sizing: border-box;
+    height: 50px;
+    @include dFlex();
+    transform: scale(0.8);
+    margin-left: -10px;
+
+    .bracket{
+        font-size: x-large;
+    }
+
+    .bracket-left{
+        transform: translateX(0px);
+        transition: transform 75ms ease-in-out;
+    }
+
+    .bracket-right{
+        transform: translateX(0px);
+        transition: transform 75ms ease-in-out;
+    }
+
+    .initials{
+        font-style: italic;
+        margin-left: -4px;
+        margin-top: -5px;
+    }
+    
+    .r{
+        height: 100%;
+        padding-top: 12px;
+        padding-right: 4px;
+    }
+
+    .s{
+        padding-left: 4px;
+    }
+    
+    &:hover{
+        cursor: pointer;
+    }
+} 
+
+@media(max-width: 1007px){
+    footer{
+        .footer-content {
+            padding-inline: 50px;
+        }
+    }
+}
+
+@media(max-width: 650px){
+    footer{
+        .footer-content {
+            padding-inline: 30px;
+            padding-block: 15px;
+        }
+    }
+
+    .logo {
+        transform: scale(0.6);
+        margin-left: -18px;
+    } 
+
+    .footer-left{
+        >span{
+            font-size: 16px;
+        }
+    }
+
+    .footer-right {
+        @include dFlex($ai: end, $g: 4px);
+    
+        div { 
+            @include dFlex($g: 0px);
+        }
+    
+        a {
+            @include fontOverpass($fs: 14px, $fw: 400, $fc: $backgroundClr);
+
+            img{
+                transform: scale(0.7);
+            }
+        }
+    }
+}

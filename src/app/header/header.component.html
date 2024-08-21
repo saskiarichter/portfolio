@@ -1,0 +1,20 @@
+<header>
+    <a href="#start" class="logo">
+        <span class="bracket bracket-left">[</span>
+        <span class="initials s">S</span>
+        <span class="initials r">R</span>
+        <span class="bracket bracket-right">]</span>
+    </a>
+    
+    <div class="menu">
+        <a href="#about">{{'HEADER.about' | translate}}</a>
+        <a href="#skills">{{'HEADER.skills' | translate}}</a>
+        <a href="#portfolio">{{'HEADER.portfolio' | translate}}</a>
+        <a href="#contact">{{'HEADER.contact' | translate}}</a>
+        <div class="language">
+            <button (click)="switchLanguage('de')">DE</button>
+            <div></div>
+            <button (click)="switchLanguage('en')">EN</button>
+        </div>
+    </div>
+</header>

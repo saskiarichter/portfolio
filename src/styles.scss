@@ -17,13 +17,51 @@ $highlightClr: #FF9900;
     font-size: $fs;
     font-weight: $fw;
     color: $fc;
+
+    &:hover {
+        cursor: default;
+    }
 }
 
-@mixin fontOverpass($fs: 12px, $fw: 400, $fc: $primaryClr) {
+@mixin fontOverpass($fs: 22px, $fw: 300, $fc: $primaryClr) {
     font-family: 'Overpass';
     font-size: $fs;
     font-weight: $fw;
     color: $fc;
+
+    &:hover {
+        cursor: default;
+    }
+}
+
+@mixin subtitle() {
+    @include fontSyne($fw: 800, $fs: 78px);
+    letter-spacing: 0.001em;
+    line-height: 78px;
+    margin: 0;
+    margin-bottom: 32px;
+    display: inline-block;
+    transition: color 100ms ease-in-out;
+
+    &:hover {
+        color: $highlightClr;
+    }
+
+    @media(max-width: 945px){
+        @include fontSyne($fw: 800, $fs: 60px);
+        line-height: 60px;
+    }
+
+    @media(max-width: 745px){
+        @include fontSyne($fw: 800, $fs: 40px);
+        line-height: 40px;
+        margin-bottom: 24px;
+    }
+
+    @media(max-width: 465px){
+        @include fontSyne($fw: 800, $fs: 28px);
+        line-height: 28px;
+    }
 }
 
 @mixin generalButton() {
@@ -31,23 +69,52 @@ $highlightClr: #FF9900;
     border: solid 4px $primaryClr;
     @include fontOverpass($fs: 23px);
     background-color: $backgroundClr;
-    transition: padding 125ms ease-out, box-shadow 125s ease-out, background-color 100ms ease-in-out;
+    transition: padding 125ms ease-out, box-shadow 125s ease-out, font-weight 100ms ease-out;
 
     &:hover {
+        cursor: pointer;
         font-weight: 700;
         padding: 20px 80px 20px 80px;
         box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.15);
-        cursor: pointer;
+        transition: padding 100ms ease-out, box-shadow 100s ease-out, font-weight 100ms ease-out;
     }
 
     &:active {
         background-color: $primaryClr;
         @include fontOverpass($fs: 23px, $fc: $backgroundClr);
     }
+
+    @media(max-width: 1200px){
+        padding: 10px 50px 10px 50px;
+
+        &:hover{
+            padding: 10px 60px 10px 60px;
+        }
+    }
+}
+
+@mixin underlineButton($clr: $primaryClr) {
+    border: 1px solid $clr;
+    border-radius: 5px;
+    width: 50%;
+    opacity: 0;
+    transform: translateX(0);
+    transition: opacity 100ms ease-in, transform 100ms ease-in;
+}
+
+@mixin underlineButtonHover() {
+    opacity: 1;
+    transform: translateX(100%);
+    transition: opacity 100ms ease-in, transform 100ms ease-in;
 }
 
 body {
     background-color: $backgroundClr;
+    @include fontOverpass();
+}
+
+* {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
     margin: 0;
-    @include dFlex();
 }

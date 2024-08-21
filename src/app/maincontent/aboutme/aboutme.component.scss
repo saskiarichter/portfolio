@@ -1,0 +1,127 @@
+@import './../../../styles.scss';
+
+section {
+    width: 100%;
+    max-width: 1240px;
+
+    h2 {
+        @include subtitle();
+        text-align: center;
+    }
+}
+
+.aboutme-content {
+    @include dFlex($ai: start, $g: 80px);
+    padding-bottom: 30px;
+}
+
+.aboutme-text {
+    @include dFlex($ai: start, $g: 12px);
+    flex-direction: column;
+
+    >span {
+        padding-bottom: 32px;
+    }
+
+    .locations {
+        @include dFlex($g: 12px);
+    }
+
+    .aboutme-button {
+        width: 100%;
+        @include dFlex();
+        padding-top: 32px;
+
+        button {
+            @include generalButton();
+        }
+    }
+}
+
+.profile-image {
+    position: relative;
+
+    img {
+        width: 500px;
+        height: 500px;
+        object-fit: cover;
+    }
+
+    .overlay-border {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        border: 4px solid $primaryClr;
+        box-sizing: border-box;
+        @include dFlex($jc: end);
+        opacity: 0;
+    }
+
+    &:hover {
+        cursor: default;
+
+        .overlay-border {
+            opacity: 1;
+            transition: opacity 75ms ease-in;
+        }
+    }
+}
+
+@media(max-width: 1140px){
+    section{
+        @include dFlex();
+        flex-direction: column;
+    }
+
+    .aboutme-content {
+        @include dFlex($ai: center, $g: 24px);
+        flex-direction: column;
+        
+    }
+}
+
+@media(max-width: 650px){
+    section{
+        font-size: 18px;
+    }
+
+    .aboutme-content {
+        @include dFlex($g: 30px);
+    }
+
+    .aboutme-text {
+        @include dFlex($ai: start, $g: 8px);
+    
+        >span {
+            padding-bottom: 24px;
+        }
+    
+        .aboutme-button {
+            padding-top: 24px;
+        }
+    }
+
+    .profile-image {
+        img {
+            width: 400px;
+            height: 400px;
+        }
+    }
+}
+
+@media(max-width: 465px){
+    .profile-image {
+        img {
+            width: 280px;
+            height: 280px;
+        }
+
+        .overlay-border {
+            top: 10px;
+            left: 10px;
+            border: 4px solid $primaryClr;
+        }
+    }
+}
